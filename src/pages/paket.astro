@@ -1,0 +1,45 @@
+---
+// src/pages/paket.astro
+import Layout from '../layouts/Layout.astro';
+import PaketCard from '../components/PaketCard.astro';
+
+// Impor gambar-gambar paket
+import imgPaket1 from '../assets/paket1.jpg';
+import imgPaket2 from '../assets/paket2.jpg';
+import imgPaket3 from '../assets/paket3.jpg';
+// Tambahkan gambar lain jika perlu, misal:
+// import imgPaket4 from '../assets/paket4.jpg';
+---
+<Layout title="Semua Paket Umroh - Travel Umroh">
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Pilihan Paket Umroh Terbaik</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <PaketCard
+          namaPaket="Umroh Berkah Awal Musim"
+          harga="Rp 25 Juta"
+          durasi={9}
+          maskapai="Saudia"
+          imgSrc={imgPaket1}
+          href="/paket/umroh-berkah"
+        />
+        <PaketCard
+          namaPaket="Umroh Spesial Ramadhan"
+          harga="Rp 35 Juta"
+          durasi={12}
+          maskapai="Garuda"
+          imgSrc={imgPaket2}
+          href="/paket/umroh-spesial-ramadhan"
+        />
+        <PaketCard
+          namaPaket="Umroh Keluarga Hemat"
+          harga="Rp 23 Juta"
+          durasi={9}
+          maskapai="Lion Air"
+          imgSrc={imgPaket3}
+          href="/paket/umroh-keluarga-hemat"
+        />
+        </div>
+    </div>
+  </section>
+</Layout>
